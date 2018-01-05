@@ -67,19 +67,19 @@ def get_one_report(id):
         pass
 
     if request.method == 'GET':
-    #     return jsonify({'id':o.id, 
-    #         'created_on':o.created_on.strftime('%Y-%m-%d'), 
-    #         'changed_on':o.changed_on.strftime('%Y-%m-%d'),
-    #         'user_id':o.user_id or '',
-    #         'db_id':o.db_id or '',
-    #         'label':o.label or '',
-    #         'schema':o.schema or '',
-    #         'sql':o.sql or '',
-    #         'description':desc,
-    #         })
+        return jsonify({'id':o.id, 
+            'created_on':o.created_on.strftime('%Y-%m-%d'), 
+            'changed_on':o.changed_on.strftime('%Y-%m-%d'),
+            'user_id':o.user_id or '',
+            'db_id':o.db_id or '',
+            'label':o.label or '',
+            'schema':o.schema or '',
+            'sql':o.sql or '',
+            'description':desc,
+            })
     
-    # elif request.method == 'POST':
-        qjson = {}#request.json
+    elif request.method == 'POST':
+        qjson = request.json#{}#request.json
 
         sql = o.sql
         database_id = o.db_id
