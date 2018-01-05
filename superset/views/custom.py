@@ -214,11 +214,12 @@ def download_one_report(id, query_id):
         ret = gen_csv(title, table, o.label)
     elif filetype == 'xlsx':
         ret = gen_xlsx(title, table, o.label)
-    else:
-        ret = jsonify({'displayfield_set': desc['displayfield_set'], 'data': data['data']})
+    #else:
+    #    ret = jsonify({'displayfield_set': desc['displayfield_set'], 'data': data['data']})
 
     return ret
 
+#================= utils =====================
 code_map = ( 
       'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 
       'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 
