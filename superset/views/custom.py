@@ -156,8 +156,10 @@ def get_one_report(id):
             session.add(cquery)
 
             session.flush()
+            db.session.commit()
             query_id = query.id
             cquery_id =cquery.id
+
 
             data = sql_lab.get_sql_results(
                         query_id=query_id, return_results=True,
