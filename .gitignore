@@ -37,3 +37,7 @@ superset/assets/version_info.json
 
 # IntelliJ
 *.iml
+
+# dev temp files
+superset/assets/package-lock.json
+run.py
